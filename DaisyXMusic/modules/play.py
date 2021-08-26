@@ -1068,7 +1068,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Mahnını səsləndirmək etmək istəyən sən deyilsən!", show_alert=True)
         return
-    await cb.message.edit("Gözləyin. Səsləndirməyə Başlayı")
+    await cb.message.edit("__Gözləyin. Səsləndirməyə Başlayır__🔊")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
