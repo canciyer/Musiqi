@@ -52,7 +52,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Xətası! 🛑 \n Asistan {user.first_name} bir çox qrupda olduğundan qrupa qatılmaya bilər."
-            "\n\nO@{ASSISTANT_NAME} əl ilə qrupa dəvət edin</b>",
+            "\n\nOnu @{ASSISTANT_NAME} əl ilə qrupa dəvət edin</b>",
         )
         return
     await message.reply_text(
