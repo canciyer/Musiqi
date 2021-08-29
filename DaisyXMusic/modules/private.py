@@ -30,8 +30,9 @@ def _start(client, message):
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton("Grupa əlavə et", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}"), 
-            InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}")
+            InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}")
+            InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}"),
+            InlineKeyboardButton("Rəsmi Sayt", url=f"https://groupmuzik.tk")
             ]]
         ),
         reply_to_message_id=message.message_id
@@ -44,37 +45,6 @@ async def gstart(_, message: Message):
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Dəstək Qrupu", url=f"https://t.me/{SUPPORT_GROUP}")]]),
     )
 
-@Client.on_message(filters.command("privacy") & ~filters.private & ~filters.channel)
-async def gstart(_, message: Message):
-    await message.reply_text(
-        f"""
-**Gizlilik Və Təhlükəsizlik**
-
-**GroupMuzik** bot komandası hər bir istifadəçinin təhlükəsiz şəkildə istifadə etməsi üçün əlindən gələni edir.
-
-** Bot təhlükəsizdir ? **
- - Bəli botda heçbir təlükə yoxdu olmyacaqda bota heçbir qırağ admin/ka əlavə olunmur botu sadəcə bot qurucuları görə bilər.__
-
-** Sizdən nələri toplayırıq ? **
- - __Sizdən topladığımız hər məlumat botun ideal vəziyyətdə işləməsi üçündür ki bunlar hər kəsə açıq məlumatıarınızdır__ (ID, USERNAME, FIRST NAME, GRUP ID)
-
-** Bot qrupuma nəsə edə bilər ? **
- - __Xeyir bot qrupunuzda sizin istəmədiyiniz heçbir əmri icra edə bilməz!__
-
-**Botu qrupumda kimlər istifadə edə bilər ?**
- - __Botu qrupda sadəcə adminlər və admin icazəsi verilə istifadəçilər istifadə edə bilər__
-
-** Hər hansı təklif və şikayətlər üçün **
-        """,
-        reply_markup=InlineKeyboardMarkup([
-                [
-                    InlineKeyboardButton("Şamil 🇦🇿", url=f"https://t.me/samil")
-                ],
-                [
-                    InlineKeyboardButton("𝙷𝚄̈𝚂𝙽𝚄̈ 𝙴𝙷𝙴𝙳𝙾𝚅 🇦🇿", url=f"https://t.me/HusnuEhedov")
-                ]
-            ]),
-    )
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
