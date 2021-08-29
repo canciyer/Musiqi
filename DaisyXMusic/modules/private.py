@@ -29,10 +29,9 @@ def _start(client, message):
         parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton("Grupa əlavə et", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-            InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}")
-            ]],[
-            InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}")
-            InlineKeyboardButton("Rəsmi Sayt", url=f"https://groupmuzik.tk")
+            ],[
+            InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}"),
+            InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}")
             ]]
         ),
         reply_to_message_id=message.message_id
