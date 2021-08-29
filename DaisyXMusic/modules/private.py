@@ -33,7 +33,7 @@ def _start(client, message):
             InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}")
             InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}"),
             InlineKeyboardButton("Rəsmi Sayt", url=f"https://groupmuzik.tk")
-            ]]
+            ]]]
         ),
         reply_to_message_id=message.message_id
         )
