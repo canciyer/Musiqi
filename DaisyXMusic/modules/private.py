@@ -31,7 +31,7 @@ def _start(client, message):
             InlineKeyboardButton("Grupa əlavə et", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ],[
             InlineKeyboardButton("Yeniliklər", url=f"https://t.me/{UPDATES_CHANNEL}")
-            InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}"),
+            InlineKeyboardButton("Dəstək", url=f"https://t.me/{SUPPORT_GROUP}")
             InlineKeyboardButton("Rəsmi Sayt", url=f"https://groupmuzik.tk")
             ]]]
         ),
